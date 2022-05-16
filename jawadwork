@@ -14,5 +14,3 @@ idDf['target'] = mp.random.rand (700000,1);
 print(idDf);
 idDf.to_csv('out.csv', index=False);
 
-
-![](images/1222.png)
