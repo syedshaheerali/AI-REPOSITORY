@@ -1,0 +1,43 @@
+from sklearn import naive_bayes
+from google.colab import drive
+# This will prompt for authorization.
+
+#naive_bayes
+
+drive.mount('/content/drive')
+
+import pandas as pd
+train_data = pd.read_csv('/content/drive/MyDrive/trainDF.csv')
+
+train_data.head(2)
+
+train = pd.DataFrame(train_data)
+
+
+from sklearn.model_selection import train_test_split
+X = train.Slope
+Y = train.Cover_Type
+X_train, y_train = train_split(X, Y, test_size=0.2,random_state=109)
+print("X_train : ",len(X_train))
+print("X_train : ",len(y_train))
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.preprocessing import MinMaxScaler
+
+model = MultinomialNB()
+scaler = MinMaxScaler()
+T= X_train.reshape(-1,1)
+X_train = scaler.fit_transform(T)
+model.fit(X_train,y_train)
+
+from sklearn import metrics
+# Model Accuracy
+print("Accuracy:",metrics.accuracy_score( labels))
+
+Test = pd.DataFrame(id)
+arr=[]
+for row in id:
+  arr.append(labels[row])
+Test["Cover type"] = arr
+Test.to_csv('Done.csv',index = False)
