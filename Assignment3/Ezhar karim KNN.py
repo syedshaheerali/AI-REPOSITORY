@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.svm import SVC
 import matplotlib.pyplot as plt
-df = pd.read_csv('/content/trainDF.csv')
+df = pd.read_csv('trainDF.csv')
 df.head()
 
 # Separating Target & Other Columns 
