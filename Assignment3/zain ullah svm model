@@ -1,0 +1,56 @@
+import pandas as pd # For data cleaning
+import numpy as np # Numerical Methods
+from sklearn.metrics import accuracy_score # For Checking Accuracy
+from sklearn.model_selection import train_test_split # Splitting Data For Train Test
+from sklearn import tree # ML Algo Decision Tree
+from sklearn import metrics
+from sklearn.neighbors import KNeighborsClassifier # ML Algo KNN
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.svm import SVC
+import matplotlib.pyplot as plt
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.preprocessing import MinMaxScaler
+df = pd.read_csv('/content/trainDF.csv')
+df.head()
+
+# Separating Target & Other Columns 
+XTT = df.drop(columns=['f_00'])
+yTT = df['f_00']  
+X_train, X_test, y_train, y_test = train_test_split(XTT, yTT, test_size=0.2)
+
+train = pd.DataFrame(train_data)
+
+
+from sklearn.model_selection import train_test_split
+X = train.Slope
+Y = train.Cover_Type
+X_train, y_train = train_split(X, Y, test_size=0.2,random_state=109)
+print("X_train : ",len(X_train))
+print("X_train : ",len(y_train))
+
+
+
+model = MultinomialNB()
+scaler = MinMaxScaler()
+T= X_train.reshape(-1,1)
+X_train = scaler.fit_transform(T)
+model.fit(X_train,y_train)
+
+
+
+modelKNN = KNeighborsClassifier(n_neighbors=5)
+resultKNN = modelKNN.fit(X_train, y_train)
+prediction_test = modelKNN.predict(X_test)
+accuracyKNN = metrics.accuracy_score(y_test, prediction_test)
+print("Model Accuracy (KNN):" "\n", accuracyKNN)
+
+#SVM
+
+modelSVM = SVC()
+resultSVM = modelSVM.fit(X_train, y_train);
+prediction_test =  modelSVM.predict(X_test) # Print the prediction accuracy
+accuracySVM = metrics.accuracy_score(y_test, prediction_test)
+print("Model Accuracy (SVM):" "\n", accuracySVM)
+
