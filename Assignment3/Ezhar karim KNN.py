@@ -17,16 +17,6 @@ XTT = df.drop(columns=['f_00'])
 yTT = df['f_00']  
 X_train, X_test, y_train, y_test = train_test_split(XTT, yTT, test_size=0.2)
 
-
-
-# Decision Tree
-modelDT = tree.DecisionTreeClassifier();
-resultDT = modelDT.fit(X_train, y_train);
-prediction_test = modelDT.predict(X_test)
-accuracyDT = metrics.accuracy_score(y_test, prediction_test)
-print()
-print ("Model Accuracy (Decision Tree):" "\n", accuracyDT)
-
 modelKNN = KNeighborsClassifier(n_neighbors=5)
 resultKNN = modelKNN.fit(X_train, y_train)
 prediction_test = modelKNN.predict(X_test)
