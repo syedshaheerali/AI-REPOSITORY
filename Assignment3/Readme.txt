@@ -7,5 +7,6 @@ NAIVES BAYES  By ZAIN ULLAH :
 Naive Bayes falls under the umbrella of supervised machine learning algorithms that are primarily used for classification. In this context, "supervised" tells us that the algorithm is trained with both input features and categorical outputs (i.e., the data includes the correct desired output for each point, which the algorithm should predict).It is easy and fast to predict class of test data set. It also perform well in multi class prediction
 When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
 
-
+Syed Shaheer Ali 64291
+Syed Shaheer Ali- SVM model: A support vector machine (SVM) is a supervised machine learning model that uses classification algorithms for two-group classification problems. After giving an SVM model sets of labeled training data for each category, they're able to categorize new text Though we say regression problems as well its best suited for classification. The objective of SVM algorithm is to find a hyperplane in an N-dimensional space that distinctly classifies the data points.
 
