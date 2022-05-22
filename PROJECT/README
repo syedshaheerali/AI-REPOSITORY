@@ -1,0 +1,5 @@
+SYED SHAHEER ALI 64291:
+In Working since 3 4 days, we got so many results, ups and downs in accuracy, hanging of laptop, burning heat of laptop, etc. After 7 to 8 predictions submitted we got the result as shown in the pictures. What is good about SVM?
+MODEL: SVM generally do not suffer condition of overfitting and performs well when there is a clear indication of separation between classes. SVM can be used when total no of samples is less than the no of dimensions and performs well in terms of memory. SVM performs and generalized well on the out of sample data.
+**Some Main problem**
+Laptop got hanged, and still on updating mode.
