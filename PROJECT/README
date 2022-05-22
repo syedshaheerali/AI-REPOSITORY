@@ -5,6 +5,32 @@ MODEL: SVM generally do not suffer condition of overfitting and performs well wh
 Laptop got hanged, and still on updating mode.
 
 
-Jawad Ahmed 62846
+
+
+
+
+ZAIN ULLAH 63591 NAIVE BAYES -LAPLACE SMOOTHING
+PROBLEM:
+in my model I  faced the  problem in the data cleaning sets beacuse it take time to upload the datasets by which laptop beacame hang
+and in column 27 there is data of alphabets and we donot need this data . in assignment 3 my Accuracy was 0.52 then after 
+that i improve the accuracy to 0.625 by using more date cleaning techniques.
+
+
+
+
+
+
+
+
+
+
+
+Jawad Ahmed 62846 naive bayes Lidstone Smoothing
 Laptop stucking issue
 heavyfiles
+
+
+
+
+
+
