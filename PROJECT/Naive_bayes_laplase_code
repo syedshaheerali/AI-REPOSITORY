@@ -1,0 +1,49 @@
+import pandas as pd
+from sklearn.metrics import accuracy_score # For Checking Accuracy
+from sklearn.model_selection import train_test_split # Splitting Data For Train Test
+from sklearn.neighbors import KNeighborsClassifier # ML Algo KNN
+from sklearn import metrics
+from sklearn.naive_bayes import MultinomialNB # For Multinomial Naive Bayes Model
+from sklearn.model_selection import cross_val_score # For Cross Validation
+from sklearn.naive_bayes import BernoulliNB 
+import warnings
+warnings.filterwarnings('ignore')
+train = pd.read_csv("train.csv")
+test = pd.read_csv('test.csv')
+# Separating Target & Other Columns
+X = train.drop(columns=['target'])
+y = train['target']
+bnbTesting = BernoulliNB() #Classifier
+bnbTesting.fit(X_train, y_train) #Training by fitting into model
+bnbTestingPred = bnbTesting.predict(X_test) #Prediction
+bnbAcc = metrics.accuracy_score(y_test, bnbTestingPred) #Checking Accuracy Score
+#NAIVE BAYES
+nav_clf = BernoulliNB()
+nav_scores = cross_val_score(nav_clf, X_train, y_train, cv=6)
+nav_mean = nav_scores.mean()
+#NAIVE BAYES LAPLACE SMOOTHING 
+from sklearn.naive_bayes import GaussianNB
+classifier = GaussianNB()
+classifier.fit(X_train, y_train)
+y_pred  =  classifier.predict(X_test)
+gnbAcc = metrics.accuracy_score(y_test, y_pred) # Checking Accuracy Score
+nav_clf = GaussianNB()
+nav_scores = cross_val_score(nav_clf, X_train, y_train, cv=6)
+print('Naive Bayes Scores: ',nav_scores)
+nav_mean = nav_scores.mean()
+bnbTesting = BernoulliNB(alpha=10.0) #Classifier
+bnbTesting.fit(X_train, y_train) #Training by fitting into model
+bnbTestingPred = bnbTesting.predict(X_test) #Prediction
+bnbAcc = metrics.accuracy_score(y_test, bnbTestingPred) #Checking Accuracy Score
+from sklearn.model_selection import GridSearchCV
+params = {'alpha': [0.01, 0.1, 0.5, 1.0, 10.0]}
+bernoulli_nb_grid = GridSearchCV(BernoulliNB(), param_grid=params, n_jobs=-1, cv=10, verbose=10)
+bernoulli_nb_grid.fit(X,y)
+print('Train Accuracy : %.3f'%bernoulli_nb_grid.best_estimator_.score(X_train, y_train))
+print('Test Accuracy : %.3f'%bernoulli_nb_grid.best_estimator_.score(X_test, y_test))
+print('Best Accuracy Through Grid Search : %.3f'%bernoulli_nb_grid.best_score_)
+print('Best Parameters : ',bernoulli_nb_grid.best_params_)
+print ("Naive Bayes Accuracy: ", bnbAcc)
+print('Naive Bayes Mean Score: ',nav_mean)
+print ("Naive Bayes Accuracy: ", gnbAcc)
+print('Naive Bayes Mean Score: ',nav_mean)
