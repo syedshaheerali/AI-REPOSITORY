@@ -9,8 +9,8 @@ Laptop got hanged, and still on updating mode.
 ZAIN ULLAH 63591 NAIVE BAYES -LAPLACE SMOOTHING
 PROBLEM:
 in my model I  faced the  problem in the data cleaning sets beacuse it take time to upload the datasets by which laptop beacame hang
-and in column 27 there is data of alphabets and we donot need this data . in assignment 3 my Accuracy was 0.52 then after 
-that i improve the accuracy to 0.625 by using more date cleaning techniques.
+and in column 27 there is data of alphabets and we donot need this data . after  assignment 3 my Accuracy was not good  so after 
+by using more date cleaning techniques my final accuracy is 0.62538 
 
 
 
