@@ -1,0 +1,79 @@
+ #==============FIRSTLY IMPORT ALL THE LIBRARIES====================
+
+import pandas as pd # For data cleaning
+import numpy as np # Numerical Methods
+from sklearn.metrics import accuracy_score # For Checking Accuracy
+from sklearn.model_selection import train_test_split # Splitting Data For Train Test
+from sklearn import tree # ML Algo Decision Tree
+from sklearn import metrics
+from sklearn.neighbors import KNeighborsClassifier # ML Algo KNN
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.svm import SVC
+import matplotlib.pyplot as plt
+from sklearn import metrics
+from sklearn.naive_bayes import MultinomialNB # For Multinomial Naive Bayes Model
+from sklearn.model_selection import cross_val_score # For Cross Validation
+from sklearn.naive_bayes import BernoulliNB 
+import warnings
+from sklearn.naive_bayes import GaussianNB
+warnings.filterwarnings('ignore')
+
+
+#=========Read the Train Data from Desktop==========================================
+
+train = pd.read_csv("train.csv")
+train.head()
+
+#=========Read the Test Data from Desktop==========================================
+
+test = pd.read_csv('test.csv')
+test.head()
+
+#========Get the number of rows and columns of test and train ===========================
+
+print(train.shape)
+print(test.shape)
+
+#handling the problems false prove that there is no empty values in the list
+df.isnull().any()
+
+
+# Separating Target & Other Columns
+X = train.drop(columns=['target'])
+y = train['target']
+
+
+
+# Training Testing (Split Data 80% 30%)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+
+#Classifier Naive Bayes classifier for multivariate Bernoulli models
+Testing = BernoulliNB() 
+
+#Training by fitting into model by x train and y train
+Testing.fit(X_train, y_train)
+
+#prediction the dependent variable
+TestingPred = Testing.predict(X_test)
+
+#Checking Accuracy by using naive bayes model
+Accuracy = metrics.accuracy_score(y_test, TestingPred) 
+print (" Accuracy Using Naive Bayes Model : ", Accuracy)
+
+#in the end when the all data cleaning process is finished we can download the cleaned csv file and submit 
+#it into the kaggle competition
+
+testcsv.shape
+
+#csv file without index
+testcsv.to_csv('trainDF.csv', index=False)
+
+
+
+
+
+
+
