@@ -1,4 +1,13 @@
-NAMES   
+
+NAMES            STUDENT_ID       MODEL                              ACCURACY
+SYED SHAHEER ALI   64291         SVM MODEL
+
+ZAIN ULLAH         63591         NAIVE BAYES_LAPLACE_SMOOTHING        0.625381
+
+EZHAR KARIM        63604         KNN MODEL
+
+JAWAD AHMED        62846         NAIVE BAYES Lidstone Smoothing
+
 
 
 
