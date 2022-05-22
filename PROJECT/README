@@ -1,12 +1,12 @@
 
 NAMES            STUDENT_ID       MODEL                              ACCURACY
-SYED SHAHEER ALI   64291         SVM MODEL                           0.5
+SYED SHAHEER ALI   64291         SVM MODEL
 
 ZAIN ULLAH         63591         NAIVE BAYES_LAPLACE_SMOOTHING        0.625381
 
-EZHAR KARIM        63604         KNN MODEL                            0.6880777777777778
+EZHAR KARIM        63604         KNN MODEL
 
-JAWAD AHMED        62846         NAIVE BAYES Lidstone Smoothing       ----
+JAWAD AHMED        62846         NAIVE BAYES Lidstone Smoothing
 
 
 
@@ -25,7 +25,16 @@ in my model I  faced the  problem in the data cleaning sets beacuse it take time
 and in column 27 there is data of alphabets and we donot need this data . after  assignment 3 my Accuracy was not good  so after 
 by using more date cleaning techniques my final accuracy is 0.62538 
 
-
+Ezhar karim 63604  KNN algorithm 
+Concepts:
+K-nearest neighbors (KNN) algorithm is a type of supervised ML algorithm which can be used for both classification as well 
+as regression predictive problems. However, 
+it is mainly used for classification predictive problems in industry. The following two properties would define KNN well −
+Lazy learning algorithm − KNN is a lazy learning algorithm because it does not have a specialized training phase and uses 
+all the data for training while classification.
+Non-parametric learning algorithm − KNN is also a non-parametric learning algorithm because it doesn’t assume anything about the underlying data.
+PROBLEM:
+It will take so much time in Debuging.
 
 
 
